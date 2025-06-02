@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  main.registrants-container
+    table.listing-table
+      thead
+        tr
+          th Name
+          th Email
+      tbody
+        each person in registrations
+          tr
+            td= person.name
+            td= person.email

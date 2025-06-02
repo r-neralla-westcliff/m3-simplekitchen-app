@@ -1,0 +1,242 @@
+nav {
+  background-color: rgb(218, 170, 14);
+  overflow: hidden;
+  padding: 1rem;
+}
+nav .nav-left, nav .nav-right {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav .nav-left {
+  float: left;
+}
+nav .nav-left li {
+  float: left;
+  margin-right: 15px;
+}
+nav .nav-left li a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+nav .nav-left li a:hover {
+  text-decoration: underline;
+}
+nav .nav-left .separator {
+  color: white;
+  padding: 0 10px;
+  list-style: none;
+  font-weight: bold;
+}
+nav .nav-right {
+  float: right;
+}
+nav .nav-right li {
+  float: left;
+}
+nav .nav-right li a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+nav .nav-right li a:hover {
+  text-decoration: underline;
+}
+
+/* Variables */
+html {
+  font-size: 1em;
+  width: 100%;
+}
+
+body {
+  font-family: Arial, Helvetica, Sans-Serif;
+  background: rgb(218, 170, 14);
+}
+
+header {
+  height: 50px;
+  width: 1350px;
+  margin: 0.8em auto 1em auto;
+}
+
+main {
+  background: rgb(255, 255, 255);
+  width: 1350px;
+  min-height: 535px;
+  padding: 1.5%;
+  margin: 0 auto;
+}
+main #intro-image {
+  float: left;
+  width: 800px;
+}
+main #intro-image img {
+  width: 800px;
+}
+main #intro-text {
+  width: 550px;
+  height: 407px;
+  float: left;
+  background: rgb(212, 213, 216);
+  text-align: center;
+  padding-top: 8em;
+}
+main #intro-text h3 {
+  font-size: 2em;
+  color: rgb(49, 49, 48);
+}
+main #intro-text span {
+  font-family: "Sacramento", cursive;
+  font-size: 2em;
+}
+
+footer {
+  width: 1350px;
+  margin: 2em auto;
+  padding-left: 80px;
+  font-size: 0.85em;
+}
+
+button, .submit-buttton {
+  color: rgb(255, 255, 255);
+  width: 100px;
+  height: 40px;
+  background: rgb(218, 170, 14);
+  margin-top: 2em;
+}
+
+.submit-buttton {
+  border: 1px rgb(49, 49, 48);
+}
+
+/* css for registration form and errors*/
+/* Styles for listing table */
+body {
+  padding: 40px 10px;
+  background-color: rgb(218, 170, 14);
+}
+
+.listing-reg h1 {
+  text-align: center;
+  margin: 0 0 2rem;
+}
+
+.form-registration {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.form-registration input {
+  width: 100%;
+  margin: 0px 0 10px;
+}
+.form-registration .btn {
+  flex: 1 0 100%;
+}
+
+.my-errors {
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  color: #333;
+  font-size: 1.2rem;
+  display: table;
+}
+.my-errors li {
+  margin: 0 0 1rem;
+}
+.my-errors li:before {
+  content: "! Error : ";
+  color: #f00;
+  font-weight: bold;
+}
+
+.listing-table {
+  width: 100%;
+}
+.listing-table th {
+  padding: 10px;
+  border-bottom: 1px solid #666;
+  background: #000;
+  color: #fff;
+}
+.listing-table th:first-child {
+  border-right: 1px solid #666;
+}
+.listing-table td {
+  padding: 10px;
+  border-bottom: 1px solid #666;
+}
+.listing-table td:first-child {
+  border-right: 1px solid #666;
+}
+
+/* Register Page Layout (Additions Only) */
+.register-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: #fff;
+  padding: 2rem;
+  width: 1350px;
+  margin: 0 auto;
+}
+
+.left-info {
+  background-color: #d3d3d3;
+  width: 45%;
+  padding: 11rem;
+  text-align: center;
+}
+.left-info span {
+  font-family: "Sacramento", cursive;
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+.left-info h3 {
+  font-size: 2em;
+  color: rgb(49, 49, 48);
+}
+
+.right-form {
+  width: 50%;
+  padding: 2rem;
+}
+.right-form h2 {
+  text-align: center;
+}
+
+/* Match Register button style */
+.btn-register {
+  background-color: rgb(218, 170, 14);
+  border: none;
+  padding: 0.75rem;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* Error message improvements */
+.my-errors {
+  margin: 1rem 0 1.5rem 0;
+  padding: 0;
+  list-style: none;
+  color: #f00;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+.my-errors li {
+  margin-bottom: 0.5rem;
+  font-weight: normal;
+}
+.my-errors li::before {
+  content: "! Error : ";
+  font-weight: bold;
+  color: #f00;
+}
+
+/*# sourceMappingURL=styles.css.map */

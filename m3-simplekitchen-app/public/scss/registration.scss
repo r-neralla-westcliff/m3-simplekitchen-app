@@ -1,0 +1,36 @@
+/* Registrants table layout */
+@import "colors.scss";
+.registrants-container {
+    width: 1350px;
+    margin: 2rem auto;
+    background-color: $backgroundColor1;
+    padding: 2rem;
+  }
+  
+  /* Reuse listing-table from earlier */
+  .listing-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 1rem;
+  
+    th, td {
+      padding: 12px 15px;
+      border-bottom: 1px solid #666;
+    }
+  
+    th {
+      background: #000;
+      color: #fff;
+  
+      &:first-child {
+        border-right: 1px solid #666;
+      }
+    }
+  
+    td:first-child {
+      border-right: 1px solid #666;
+      font-weight: bold;
+    }
+  }
+  

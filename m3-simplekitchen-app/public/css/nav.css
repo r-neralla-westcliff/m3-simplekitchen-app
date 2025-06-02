@@ -1,0 +1,45 @@
+nav {
+  background-color: rgb(218, 170, 14);
+  overflow: hidden;
+  padding: 1rem;
+}
+nav .nav-left, nav .nav-right {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav .nav-left {
+  float: left;
+}
+nav .nav-left li {
+  float: left;
+  margin-right: 15px;
+}
+nav .nav-left li a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+nav .nav-left li a:hover {
+  text-decoration: underline;
+}
+nav .nav-left .separator {
+  color: white;
+  padding: 0 10px;
+  list-style: none;
+  font-weight: bold;
+}
+nav .nav-right {
+  float: right;
+}
+nav .nav-right li {
+  float: left;
+}
+nav .nav-right li a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+nav .nav-right li a:hover {
+  text-decoration: underline;
+}
+
+/*# sourceMappingURL=nav.css.map */

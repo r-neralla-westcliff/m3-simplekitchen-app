@@ -1,0 +1,55 @@
+@import "colors.scss";
+
+nav {
+  background-color: $backgroundColor1;
+  overflow: hidden;
+  padding: 1rem;
+
+  .nav-left, .nav-right {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-left {
+    float: left;
+
+    li {
+      float: left;
+      margin-right: 15px;
+
+      a {
+        color: $color4;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .nav-left .separator {
+    color: white;      // matches other nav text
+    padding: 0 10px;   // spacing
+    list-style: none;
+    font-weight: bold;
+  }
+
+  .nav-right {
+    float: right;
+
+    li {
+      float: left;
+
+      a {
+        color: $color4;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+/* Registrants table layout */
+.registrants-container {
+  width: 1350px;
+  margin: 2rem auto;
+  background-color: rgb(218, 170, 14);
+  padding: 2rem;
+}
+
+/* Reuse listing-table from earlier */
+.listing-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 1rem;
+}
+.listing-table th, .listing-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #666;
+}
+.listing-table th {
+  background: #000;
+  color: #fff;
+}
+.listing-table th:first-child {
+  border-right: 1px solid #666;
+}
+.listing-table td:first-child {
+  border-right: 1px solid #666;
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=registration.css.map */
