@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const path = require('path');
 const auth = require('http-auth');
+const bcrypt = require('bcrypt');
 const { check, validationResult } = require('express-validator');
 
 const router = express.Router();
@@ -31,33 +32,50 @@ router.get('/registrants', basic.check((req, res) => {
     });
 }));
 
-router.post('/form', 
-    [
-        check('name')
-        .isLength({ min: 1 })
-        .withMessage('Please enter a name'),
-        check('email')
-        .isLength({ min: 1 })
-        .withMessage('Please enter an email'),
-    ],
-    (req, res) => {
-        //console.log(req.body);
-        const errors = validationResult(req);
-        if (errors.isEmpty()) {
-          const registration = new Registration(req.body);
-          registration.save()
-            .then(() => {res.send('Thank you for your registration!');})
-            .catch((err) => {
-              console.log(err);
-              res.send('Sorry! Something went wrong.');
-            });
-          } else {
-            res.render('form', { 
-                title: 'Registration form',
-                errors: errors.array(),
-                data: req.body,
-             });
-          }
-    });
+
+
+router.post(
+  '/form',
+  [
+    check('name')
+      .isLength({ min: 1 })
+      .withMessage('Please enter a name'),
+    check('email')
+      .isEmail()
+      .withMessage('Please enter a valid email'),
+    check('username')
+      .isLength({ min: 3 })
+      .withMessage('Please enter a username'),
+    check('password')
+      .isLength({ min: 4 })
+      .withMessage('Password must be at least 4 characters long')
+  ],
+  async (req, res) => {
+    const errors = validationResult(req);
+    if (errors.isEmpty()) {
+      try {
+        const registration = new Registration(req.body);
+
+        const salt = await bcrypt.genSalt(10);
+
+        registration.password = await bcrypt.hash(registration.password, salt);
+
+        await registration.save();
+
+        res.send('Thank you for your registration!');
+      } catch (err) {
+        console.error(err);
+        res.send('Sorry! Something went wrong.');
+      }
+    } else {
+      res.render('form', {
+        title: 'Registration form',
+        errors: errors.array(),
+        data: req.body
+      });
+    }
+  }
+);
+
 
 module.exports = router;

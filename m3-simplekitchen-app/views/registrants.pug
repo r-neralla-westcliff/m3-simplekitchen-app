@@ -7,8 +7,12 @@ block content
         tr
           th Name
           th Email
+          th Username
+          th Password
       tbody
         each person in registrations
           tr
             td= person.name
             td= person.email
+            td= person.username
+            td= person.password

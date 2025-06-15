@@ -1,7 +1,7 @@
 require('dotenv').config();
 const mongoose = require('mongoose');
 
-mongoose.connect(process.env.DATABASE, {
+mongoose.connect('mongodb://localhost:27017/productmanagment', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
@@ -19,4 +19,4 @@ const app = require('./app');
 
 const server = app.listen(3000, () => {
   console.log(`Express is running on port ${server.address().port}`);
-});
+}); 
